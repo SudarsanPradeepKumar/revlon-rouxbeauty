@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://rouxbeauty.com/",
+  "path": "index",
+  "timestamp": "2026-05-20T07:16:44.561Z",
+  "title": "Roux Beauty Hair Care & Hair Color Products | RouxBeauty.com",
+  "template": "homepage",
+  "blocks": [
+    "carousel-product",
+    "carousel-product",
+    "carousel-product",
+    "embed-social"
+  ]
+}

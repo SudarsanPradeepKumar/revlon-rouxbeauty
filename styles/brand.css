@@ -1,0 +1,15 @@
+:root {
+  --heading-font-family: "Open Sans Condensed", sans-serif;
+  --body-font-family: "Open Sans Condensed", sans-serif;
+  --background-color: #fff;
+  --text-color: #192f5b;
+  --link-color: #192f5b;
+  --link-hover-color: #0d1a36;
+  --content-max-width: 1288px;
+  --heading-size-xxl: 36px;
+  --heading-size-xl: 36px;
+  --heading-size-l: 24px;
+  --heading-size-m: 20px;
+  --heading-size-s: 18px;
+  --heading-size-xs: 16px;
+}

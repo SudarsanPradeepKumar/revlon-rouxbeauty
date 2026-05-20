@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "projectType": "doc"
+  },
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://rouxbeauty.com/"
+      ],
+      "description": "Roux Beauty homepage featuring brand hero, product categories, featured products, and promotional content",
+      "blocks": [
+        {
+          "name": "carousel-product",
+          "instances": [
+            "#home-slider .et_pb_slider"
+          ]
+        },
+        {
+          "name": "embed-social",
+          "instances": [
+            "#social-feed .cff-wrapper"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "home-slider",
+          "name": "Hero Slider",
+          "selector": "#home-slider",
+          "style": null,
+          "blocks": [
+            "carousel-product"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "social-feed",
+          "name": "Social Feed",
+          "selector": "#social-feed",
+          "style": null,
+          "blocks": [
+            "embed-social"
+          ],
+          "defaultContent": [
+            "#social-feed .et_pb_text_0 h2"
+          ]
+        },
+        {
+          "id": "weightless-oils-banner",
+          "name": "Promotional Banner",
+          "selector": "#weightless-oils-banner",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "#weightless-oils-banner .et_pb_image_0 a"
+          ]
+        }
+      ]
+    }
+  ]
+}

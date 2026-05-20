@@ -1,0 +1,40 @@
+{
+  "variantName": "carousel-product",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-05-20T06:59:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://rouxbeauty.com/",
+    "originPage": "homepage product showcase",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "product-hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + CTA link",
+    "buttonCount": 1,
+    "imageCount": 1,
+    "slidesCount": 6
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage hero product showcases",
+      "product line carousels",
+      "promotional slide decks with full-width product images"
+    ],
+    "notSuitableFor": [
+      "text-heavy content carousels",
+      "testimonial sliders",
+      "small thumbnail galleries"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-20T06:59:00.000Z"
+  }
+}

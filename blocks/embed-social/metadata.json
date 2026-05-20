@@ -1,0 +1,40 @@
+{
+  "variantName": "embed-social",
+  "baseBlock": "embed",
+  "version": "1.0.0",
+  "created": "2026-05-20T06:59:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://rouxbeauty.com/",
+    "originPage": "homepage social feed section",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "social",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "social media URL embed",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "Facebook page feed embeds",
+      "social media timeline displays",
+      "Twitter/X feed embeds",
+      "social proof sections"
+    ],
+    "notSuitableFor": [
+      "video embeds (use embed-video variant)",
+      "interactive map embeds",
+      "custom widget embeds"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-20T06:59:00.000Z"
+  }
+}
