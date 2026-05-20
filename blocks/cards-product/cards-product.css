@@ -1,19 +1,20 @@
+/* Block: cards-product
+ * Product cards grid layout (e.g., "Our Fab Three" section)
+ * Decorated DOM: .cards-product > ul > li > .cards-product-card-image + .cards-product-card-body
+ */
+
 .cards-product > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 40px;
 }
 
 .cards-product > ul > li {
-  border: 1px solid #dadada;
   background-color: var(--background-color);
-}
-
-.cards-product .cards-product-card-body {
-  margin: 16px;
+  text-align: left;
 }
 
 .cards-product .cards-product-card-image {
@@ -22,6 +23,87 @@
 
 .cards-product > ul > li img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
+}
+
+.cards-product .cards-product-card-body {
+  padding: 16px 0;
+}
+
+.cards-product .cards-product-card-body h3 {
+  font-size: 33px;
+  font-weight: 700;
+  font-family: var(--heading-font-family);
+  line-height: 33px;
+  color: var(--text-color);
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+.cards-product .cards-product-card-body p {
+  font-size: var(--body-font-size-m);
+  font-family: var(--body-font-family);
+  line-height: 30.6px;
+  color: var(--text-color);
+  margin: 0 0 10px;
+}
+
+.cards-product .cards-product-card-body a:any-link {
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid var(--text-color);
+  padding: 6px 20px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.cards-product .cards-product-card-body a:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  text-decoration: none;
+}
+
+/* Reset EDS button styling on CTA links */
+.cards-product .cards-product-card-body p.button-container {
+  margin: 0;
+}
+
+.cards-product .cards-product-card-body a.button:any-link {
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 700;
+  border: 1px solid var(--text-color);
+  border-radius: 3px;
+  padding: 6px 20px;
+  text-transform: uppercase;
+}
+
+.cards-product .cards-product-card-body a.button:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  border-color: var(--text-color);
+}
+
+@media (width >= 600px) {
+  .cards-product > ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (width >= 900px) {
+  .cards-product > ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  .cards-product > ul > li img {
+    max-height: 400px;
+    object-fit: contain;
+  }
 }

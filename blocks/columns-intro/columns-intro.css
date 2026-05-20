@@ -1,3 +1,8 @@
+/* Block: columns-intro
+ * Two-column intro layout (text heading + paragraph on left, product image on right)
+ * Decorated DOM: .columns-intro > div (row) > div (text col) + div.columns-intro-img-col
+ */
+
 .columns-intro > div {
   display: flex;
   flex-direction: column;
@@ -5,6 +10,8 @@
 
 .columns-intro img {
   width: 100%;
+  height: auto;
+  display: block;
 }
 
 .columns-intro > div > div {
@@ -17,17 +24,52 @@
 
 .columns-intro > div > .columns-intro-img-col img {
   display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Text column styling */
+.columns-intro > div > div:not(.columns-intro-img-col) {
+  padding: 18px 0;
+}
+
+.columns-intro > div > div:not(.columns-intro-img-col) h1 {
+  font-size: 43px;
+  font-weight: 700;
+  font-family: var(--heading-font-family);
+  line-height: 43px;
+  color: var(--text-color);
+  text-transform: uppercase;
+  margin: 0 0 18px;
+}
+
+.columns-intro > div > div:not(.columns-intro-img-col) p {
+  font-size: var(--body-font-size-m);
+  font-weight: 300;
+  font-family: var(--body-font-family);
+  line-height: 30.6px;
+  color: var(--text-color);
+  margin: 0;
 }
 
 @media (width >= 900px) {
   .columns-intro > div {
     align-items: center;
-    flex-direction: unset;
-    gap: 24px;
+    flex-direction: row;
+    gap: 40px;
   }
 
   .columns-intro > div > div {
     flex: 1;
+    order: unset;
+  }
+
+  .columns-intro > div > div:not(.columns-intro-img-col) {
+    padding: 18px 0;
+  }
+
+  .columns-intro > div > .columns-intro-img-col {
     order: unset;
   }
 }

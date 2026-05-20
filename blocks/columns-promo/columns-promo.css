@@ -1,3 +1,8 @@
+/* Block: columns-promo
+ * Two-column promotional layout (image + text with CTA)
+ * Decorated DOM: .columns-promo > div (row) > div.columns-promo-img-col + div (text col)
+ */
+
 .columns-promo > div {
   display: flex;
   flex-direction: column;
@@ -5,6 +10,8 @@
 
 .columns-promo img {
   width: 100%;
+  height: auto;
+  display: block;
 }
 
 .columns-promo > div > div {
@@ -19,15 +26,96 @@
   display: block;
 }
 
+/* Text column styling */
+.columns-promo > div > div:not(.columns-promo-img-col) {
+  padding: 30px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.columns-promo > div > div:not(.columns-promo-img-col) p {
+  font-size: 30px;
+  font-family: var(--body-font-family);
+  line-height: 1.2;
+  color: var(--text-color);
+  margin: 0 0 20px;
+  font-weight: 300;
+}
+
+/* Brand logo image in text column */
+.columns-promo > div > div:not(.columns-promo-img-col) p picture img {
+  max-width: 200px;
+  width: auto;
+  height: auto;
+}
+
+/* CTA link styling - navy bordered button */
+.columns-promo > div > div:not(.columns-promo-img-col) a:any-link {
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid var(--text-color);
+  padding: 6px 20px;
+  border-radius: 3px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.columns-promo > div > div:not(.columns-promo-img-col) a:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  text-decoration: none;
+}
+
+/* Reset EDS button auto-decoration */
+.columns-promo p.button-container {
+  margin: 12px 0;
+}
+
+.columns-promo a.button:any-link {
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 500;
+  border: 1px solid var(--text-color);
+  border-radius: 3px;
+  padding: 6px 20px;
+  text-transform: uppercase;
+}
+
+.columns-promo a.button:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  border-color: var(--text-color);
+}
+
 @media (width >= 900px) {
   .columns-promo > div {
     align-items: center;
-    flex-direction: unset;
-    gap: 24px;
+    flex-direction: row;
+    gap: 0;
   }
 
   .columns-promo > div > div {
     flex: 1;
     order: unset;
+    min-width: 0;
+  }
+
+  .columns-promo > div > .columns-promo-img-col {
+    flex: 1;
+  }
+
+  .columns-promo > div > div:not(.columns-promo-img-col) {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }

@@ -1,33 +1,113 @@
+/* Block: columns-cta
+ * Two-column CTA layout (BUY IN-STORE / BUY ONLINE side-by-side boxes)
+ * Decorated DOM: .columns-cta > div (row) > div (col 1) + div (col 2)
+ * Each column: h4 heading + paragraph text + link/image
+ */
+
 .columns-cta > div {
   display: flex;
   flex-direction: column;
-}
-
-.columns-cta img {
-  width: 100%;
+  gap: 20px;
 }
 
 .columns-cta > div > div {
-  order: 1;
+  background-color: rgb(232 238 245);
+  padding: 30px 20px;
+  text-align: center;
+  flex: 1;
 }
 
-.columns-cta > div > .columns-cta-img-col {
-  order: 0;
+.columns-cta h4 {
+  font-size: 36px;
+  font-weight: 300;
+  font-family: var(--heading-font-family);
+  line-height: 36px;
+  color: var(--text-color);
+  text-align: center;
+  margin: 0 0 18px;
 }
 
-.columns-cta > div > .columns-cta-img-col img {
-  display: block;
+.columns-cta p {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: var(--body-font-family);
+  line-height: 30.6px;
+  color: var(--text-color);
+  text-align: center;
+  margin: 0 0 15px;
+}
+
+.columns-cta img {
+  width: auto;
+  max-width: 180px;
+  height: auto;
+  display: inline-block;
+}
+
+/* CTA button styling */
+.columns-cta a:any-link {
+  color: var(--background-color);
+  background-color: rgb(95 119 155);
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid var(--text-color);
+  padding: 6px 20px;
+  border-radius: 3px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.columns-cta a:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  text-decoration: none;
+}
+
+/* Reset EDS button auto-decoration */
+.columns-cta p.button-container {
+  margin: 12px 0;
+  text-align: center;
+}
+
+.columns-cta a.button:any-link {
+  background-color: rgb(95 119 155);
+  color: var(--background-color);
+  font-size: 20px;
+  font-weight: 500;
+  border: 1px solid var(--text-color);
+  border-radius: 3px;
+  padding: 6px 20px;
+  text-transform: uppercase;
+}
+
+.columns-cta a.button:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  border-color: var(--text-color);
+}
+
+/* Image-only column (e.g., Sally Beauty logo) should not look like a button */
+.columns-cta > div > div:not(.columns-cta-img-col) a:has(picture) {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.columns-cta > div > div:not(.columns-cta-img-col) a:has(picture):hover {
+  background-color: transparent;
+  opacity: 0.8;
 }
 
 @media (width >= 900px) {
   .columns-cta > div {
-    align-items: center;
-    flex-direction: unset;
-    gap: 24px;
+    flex-direction: row;
+    gap: 30px;
+    align-items: stretch;
   }
 
   .columns-cta > div > div {
     flex: 1;
-    order: unset;
+    padding: 40px 30px;
   }
 }
