@@ -1,0 +1,41 @@
+{
+  "variantName": "accordion-timeline",
+  "baseBlock": "accordion",
+  "version": "1.0.0",
+  "created": "2026-05-20T08:03:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://rouxbeauty.com/about-roux/",
+    "originPage": "About Roux brand history page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "timeline",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "title (decade) + rich content (image + heading + paragraphs + optional product image)",
+    "buttonCount": 0,
+    "imageCount": 2,
+    "itemCount": 9
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "brand history timelines",
+      "chronological content with images",
+      "about pages with era-based sections",
+      "expandable rich content with photos"
+    ],
+    "notSuitableFor": [
+      "simple FAQ sections (text only)",
+      "short Q&A without images",
+      "navigation menus or dropdowns"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/about-roux/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-20T08:03:00.000Z"
+  }
+}

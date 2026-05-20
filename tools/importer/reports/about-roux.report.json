@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://rouxbeauty.com/about-roux/",
+  "path": "about-roux",
+  "timestamp": "2026-05-20T08:05:49.881Z",
+  "title": "About Roux - RouxBeauty.com",
+  "template": "about-page",
+  "blocks": [
+    "accordion-timeline"
+  ]
+}
