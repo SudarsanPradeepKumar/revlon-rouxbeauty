@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://rouxbeauty.com/hair-color/",
+  "path": "hair-color",
+  "timestamp": "2026-05-20T08:23:53.794Z",
+  "title": "Hair Color - RouxBeauty.com",
+  "template": "hair-color",
+  "blocks": [
+    "carousel-category",
+    "cards-category"
+  ]
+}

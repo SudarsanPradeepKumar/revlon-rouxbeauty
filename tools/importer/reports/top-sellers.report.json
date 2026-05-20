@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://rouxbeauty.com/top-sellers/",
+  "path": "top-sellers",
+  "timestamp": "2026-05-20T08:15:24.037Z",
+  "title": "Top Sellers - RouxBeauty.com",
+  "template": "top-sellers",
+  "blocks": [
+    "columns-promo",
+    "cards-product"
+  ]
+}

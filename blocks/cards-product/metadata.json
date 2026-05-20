@@ -1,0 +1,41 @@
+{
+  "variantName": "cards-product",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-20T08:12:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://rouxbeauty.com/top-sellers/",
+    "originPage": "Top Sellers product showcase",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "product",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "product image + heading + description + CTA",
+    "buttonCount": 1,
+    "imageCount": 1,
+    "itemCount": 3
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product showcase grids",
+      "top sellers or featured products",
+      "product category listings with images and descriptions",
+      "product cards with CTA buttons"
+    ],
+    "notSuitableFor": [
+      "text-only card layouts",
+      "blog article cards with dates/categories",
+      "team member or testimonial cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/top-sellers/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-20T08:12:00.000Z"
+  }
+}

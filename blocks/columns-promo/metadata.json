@@ -1,0 +1,40 @@
+{
+  "variantName": "columns-promo",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-20T08:12:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://rouxbeauty.com/top-sellers/",
+    "originPage": "Top Sellers promotional banner",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "promotional-banner",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + logo image + tagline text + CTA",
+    "buttonCount": 1,
+    "imageCount": 2
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "promotional banners with product imagery",
+      "product line feature sections",
+      "marketing callout sections with large imagery and CTA",
+      "two-column layouts with image on one side and text/CTA on other"
+    ],
+    "notSuitableFor": [
+      "multi-row column layouts",
+      "text-only side-by-side content",
+      "comparison tables or data-heavy layouts"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/top-sellers/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-20T08:12:00.000Z"
+  }
+}

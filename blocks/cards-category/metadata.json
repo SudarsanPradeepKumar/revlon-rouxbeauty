@@ -1,0 +1,40 @@
+{
+  "variantName": "cards-category",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-20T08:21:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://rouxbeauty.com/hair-color/",
+    "originPage": "Hair Color category page",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "category-navigation",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading link",
+    "buttonCount": 0,
+    "imageCount": 1,
+    "itemCount": 3
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product category navigation grids",
+      "simple product listings with image and linked title only",
+      "minimal product cards without descriptions or CTAs"
+    ],
+    "notSuitableFor": [
+      "product cards with descriptions and CTA buttons",
+      "blog article cards",
+      "feature showcase cards with detailed text"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/hair-color/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-20T08:21:00.000Z"
+  }
+}
