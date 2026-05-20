@@ -1,0 +1,40 @@
+{
+  "variantName": "columns-cta",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-20T16:07:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://rouxbeauty.com/hair-coloring/",
+    "originPage": "Hair Coloring category landing page purchase CTAs",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "purchase-cta",
+    "imagePattern": "minimal"
+  },
+  "contentPattern": {
+    "structure": "heading + text + CTA button | heading + text + retailer logo link",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "purchase/buy call-to-action sections with multiple options",
+      "side-by-side CTA boxes (in-store vs online)",
+      "retailer link sections with logos",
+      "two-column purchase option layouts"
+    ],
+    "notSuitableFor": [
+      "product detail layouts",
+      "image-heavy promotional banners",
+      "text-heavy editorial content layouts"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/hair-coloring/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-20T16:07:00.000Z"
+  }
+}

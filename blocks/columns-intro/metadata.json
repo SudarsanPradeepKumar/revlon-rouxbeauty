@@ -1,0 +1,40 @@
+{
+  "variantName": "columns-intro",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-20T16:07:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://rouxbeauty.com/hair-coloring/",
+    "originPage": "Hair Coloring category landing page intro",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "category-intro",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "heading + paragraph | product family image",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "category landing page introductions",
+      "text-heavy left column with product image on right",
+      "two-column layouts with heading + description on one side and large image on other",
+      "hero-like intro sections without background images"
+    ],
+    "notSuitableFor": [
+      "promotional banners with CTA buttons",
+      "product detail layouts with multiple data points",
+      "image-heavy galleries or carousels"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/hair-coloring/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-20T16:07:00.000Z"
+  }
+}
