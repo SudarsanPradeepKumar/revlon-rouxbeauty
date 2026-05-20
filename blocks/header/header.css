@@ -8,45 +8,11 @@ header .nav-wrapper {
 
 header nav {
   box-sizing: border-box;
-  display: grid;
-  grid-template:
-    'hamburger brand tools' var(--nav-height)
-    'sections sections sections' 1fr / auto 1fr auto;
-  align-items: center;
-  gap: 0 24px;
   margin: auto;
-  max-width: 1248px;
-  height: var(--nav-height);
+  max-width: var(--content-max-width);
   padding: 0 24px;
   font-family: var(--body-font-family);
-}
-
-header nav[aria-expanded='true'] {
-  grid-template:
-    'hamburger brand' var(--nav-height)
-    'sections sections' 1fr
-    'tools tools' var(--nav-height) / auto 1fr;
-  overflow-y: auto;
-  min-height: 100dvh;
-}
-
-@media (width >= 900px) {
-  header .nav-wrapper {
-    position: relative;
-  }
-
-  header nav {
-    display: flex;
-    justify-content: space-between;
-    gap: 0 32px;
-    max-width: 1264px;
-    padding: 0 32px;
-  }
-
-  header nav[aria-expanded='true'] {
-    min-height: 0;
-    overflow: visible;
-  }
+  color: var(--text-color);
 }
 
 header nav p {
@@ -56,14 +22,19 @@ header nav p {
 
 header nav a:any-link {
   color: currentcolor;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  text-decoration: underline;
 }
 
 /* hamburger */
 header nav .nav-hamburger {
-  grid-area: hamburger;
-  height: 22px;
   display: flex;
   align-items: center;
+  height: 22px;
+  padding: 16px 0;
 }
 
 header nav .nav-hamburger button {
@@ -77,6 +48,7 @@ header nav .nav-hamburger button {
   overflow: initial;
   text-overflow: initial;
   white-space: initial;
+  cursor: pointer;
 }
 
 header nav .nav-hamburger-icon,
@@ -132,141 +104,256 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
   transform: rotate(-45deg);
 }
 
+/* --- Mobile: stacked layout --- */
+
+/* Hide sections on mobile when nav collapsed */
+header nav[aria-expanded='false'] .section {
+  display: none;
+}
+
+header nav[aria-expanded='true'] .section {
+  display: block;
+}
+
+/* Default content wrapper resets */
+header nav .section .default-content-wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+/* Brand section (nth-of-type(2) because hamburger is div:nth-of-type(1)) */
+header nav .section:nth-of-type(2) {
+  padding: 12px 0;
+}
+
+header nav .section:nth-of-type(2) a {
+  font-size: var(--heading-font-size-s);
+  font-weight: 700;
+  color: var(--text-color);
+  text-decoration: none;
+  line-height: 1;
+}
+
+/* Nav sections (nth-of-type(3)) - main navigation links */
+header nav .section:nth-of-type(3) ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  font-size: 20px;
+}
+
+/* Tools section (nth-of-type(4)) - Store Locator */
+header nav .section:nth-of-type(4) > .default-content-wrapper > ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+header nav .section:nth-of-type(4) > .default-content-wrapper > ul > li {
+  padding: 8px 0;
+}
+
+header nav .section:nth-of-type(4) > .default-content-wrapper > ul > li > a {
+  font-size: var(--body-font-size-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+header nav .section:nth-of-type(3) > .default-content-wrapper > ul > li {
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 8px 0;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--text-color);
+}
+
+header nav .section:nth-of-type(3) > .default-content-wrapper > ul > li > a {
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+/* Sub-menus hidden on mobile by default */
+header nav .section:nth-of-type(3) > .default-content-wrapper > ul > li > ul {
+  display: none;
+  margin-top: 4px;
+  padding-left: 16px;
+}
+
+header nav .section:nth-of-type(3) > .default-content-wrapper > ul > li > ul > li {
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 4px 0;
+  line-height: 40px;
+}
+
+header nav .section:nth-of-type(3) > .default-content-wrapper > ul > li > ul > li a {
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+/* --- Desktop layout (>= 900px) --- */
 @media (width >= 900px) {
+  header .nav-wrapper {
+    position: relative;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  header nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 32px;
+    max-width: var(--content-max-width);
+    min-height: 64px;
+  }
+
   header nav .nav-hamburger {
     display: none;
     visibility: hidden;
   }
-}
 
-/* brand */
-header .nav-brand {
-  grid-area: brand;
-  flex-basis: 128px;
-  font-size: var(--heading-font-size-s);
-  font-weight: 700;
-  line-height: 1;
-}
+  /* All sections always visible on desktop */
+  header nav .section {
+    display: block !important;
+  }
 
-header nav .nav-brand img {
-  width: 128px;
-  height: auto;
-}
+  /* Brand: logo on left */
+  header nav .section:nth-of-type(2) {
+    flex: 0 0 auto;
+    padding: 10px 0;
+  }
 
-/* sections */
-header nav .nav-sections {
-  grid-area: sections;
-  flex: 1 1 auto;
-  display: none;
-  visibility: hidden;
-}
-
-header nav[aria-expanded='true'] .nav-sections {
-  display: block;
-  visibility: visible;
-  align-self: start;
-}
-
-header nav .nav-sections ul {
-  list-style: none;
-  padding-left: 0;
-  font-size: var(--body-font-size-s);
-}
-
-header nav .nav-sections ul > li {
-  font-weight: 500;
-}
-
-header nav .nav-sections ul > li > ul {
-  margin-top: 0;
-}
-
-header nav .nav-sections ul > li > ul > li {
-  font-weight: 400;
-}
-
-@media (width >= 900px) {
-  header nav .nav-sections {
-    display: block;
-    visibility: visible;
+  header nav .section:nth-of-type(2) a {
+    font-size: var(--heading-font-size-s);
+    font-weight: 700;
     white-space: nowrap;
   }
 
-  header nav[aria-expanded='true'] .nav-sections {
-    align-self: unset;
+  /* Tools: right-aligned (before deep nav selectors for specificity ordering) */
+  header nav .section:nth-of-type(4) {
+    flex: 0 0 auto;
+    margin-left: auto;
   }
 
-  header nav .nav-sections .nav-drop {
-    position: relative;
-    padding-right: 16px;
-    cursor: pointer;
-  }
-
-  header nav .nav-sections .nav-drop::after {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    top: 0.5em;
-    right: 2px;
-    transform: rotate(135deg);
-    width: 6px;
-    height: 6px;
-    border: 2px solid currentcolor;
-    border-radius: 0 1px 0 0;
-    border-width: 2px 2px 0 0;
-  }
-
-  header nav .nav-sections .nav-drop[aria-expanded='true']::after {
-    top: unset;
-    bottom: 0.5em;
-    transform: rotate(315deg);
-  }
-
-  header nav .nav-sections ul {
+  header nav .section:nth-of-type(4) > .default-content-wrapper > ul {
     display: flex;
-    gap: 24px;
+    gap: 0;
+  }
+
+  header nav .section:nth-of-type(4) > .default-content-wrapper > ul > li {
+    padding: 0;
+  }
+
+  header nav .section:nth-of-type(4) > .default-content-wrapper > ul > li > a {
+    font-size: var(--body-font-size-xs);
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  /* Nav sections: main menu next to brand */
+  header nav .section:nth-of-type(3) {
+    flex: 1 1 auto;
+    padding-left: 30px;
+  }
+
+  header nav .section:nth-of-type(3) > .default-content-wrapper > ul {
+    display: flex;
+    align-items: center;
+    gap: 0;
     margin: 0;
+    padding: 0;
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li {
-    flex: 0 1 auto;
+  header nav .section:nth-of-type(3) > .default-content-wrapper > ul > li {
+    display: inline-block;
+    padding: 0 22px 0 0;
     position: relative;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 20px;
+    cursor: default;
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li > ul {
+  header nav .section:nth-of-type(3) > .default-content-wrapper > ul > li > a {
+    padding: 0 0 15px;
+    display: inline-block;
+    line-height: 20px;
+  }
+
+  /* Items with sub-menus */
+  header nav .section:nth-of-type(3) > .default-content-wrapper > ul > li:has(> ul) {
+    padding-right: 22px;
+  }
+
+  /* Dropdown sub-menus hidden by default */
+  header nav .section:nth-of-type(3) > .default-content-wrapper > ul > li > ul {
     display: none;
-    position: relative;
+    position: absolute;
+    left: -20px;
+    top: 100%;
+    width: 240px;
+    padding: 12px 0;
+    margin: 0;
+    background-color: var(--background-color);
+    border: 1px solid var(--text-color);
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 10%);
+    z-index: 9999;
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
+  /* Show dropdown on hover */
+  header nav .section:nth-of-type(3) > .default-content-wrapper > ul > li:hover > ul {
     display: block;
-    position: absolute;
-    left: -24px;
-    width: 200px;
-    top: 150%;
-    padding: 16px;
+  }
+
+  header nav .section:nth-of-type(3) > .default-content-wrapper > ul > li > ul > li {
+    display: block;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 40px;
+  }
+
+  header nav .section:nth-of-type(3) > .default-content-wrapper > ul > li > ul > li:hover {
     background-color: var(--light-color);
-    white-space: initial;
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
-    content: '';
-    position: absolute;
-    top: -8px;
-    left: 16px;
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid var(--light-color);
-  }
-
-  header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
-    padding: 8px 0;
+  header nav .section:nth-of-type(3) > .default-content-wrapper > ul > li > ul > li a {
+    display: block;
+    padding: 0;
+    font-size: 18px;
+    line-height: 40px;
+    color: var(--text-color);
   }
 }
 
-/* tools */
-header nav .nav-tools {
-  grid-area: tools;
+/* Hide the misapplied nav-brand/nav-sections/nav-tools on meta/link elements */
+header nav meta,
+header nav link,
+header nav script {
+  display: none;
+}
+
+/* Reset button styles for EDS auto-decoration */
+header nav .section p.button-wrapper {
+  margin: 0;
+}
+
+header nav .section a.button:any-link {
+  display: inline;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  background: none;
+  font: inherit;
+  color: currentcolor;
+  white-space: normal;
+  text-overflow: unset;
+  overflow: visible;
 }
