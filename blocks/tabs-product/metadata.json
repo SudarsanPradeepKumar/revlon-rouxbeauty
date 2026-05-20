@@ -1,0 +1,42 @@
+{
+  "variantName": "tabs-product",
+  "baseBlock": "tabs",
+  "version": "1.0.0",
+  "created": "2026-05-20T08:46:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://rouxbeauty.com/hair-color/fanci-full-rinse/",
+    "originPage": "Fanci-Full Rinse product detail page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "product-info",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "tab label + tab content (list or paragraph)",
+    "buttonCount": 0,
+    "imageCount": 0,
+    "tabCount": 3
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product detail pages with Details/Ingredients/How To Use tabs",
+      "product specification tabs",
+      "tabbed content sections on product or service pages",
+      "information panels with 2-4 tabs of text content"
+    ],
+    "notSuitableFor": [
+      "tabs with heavy visual content or images",
+      "tabs used for navigation between page sections",
+      "single-tab content that should just be default text",
+      "tabs with embedded interactive widgets"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/hair-color/fanci-full-rinse/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-20T08:46:00.000Z"
+  }
+}

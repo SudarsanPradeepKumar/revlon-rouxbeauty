@@ -1,0 +1,111 @@
+/* Block: columns-product -- product detail two-column layout */
+
+.columns-product {
+  color: var(--text-color);
+}
+
+.columns-product > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns-product > div > div {
+  order: 1;
+}
+
+.columns-product > div > .columns-product-img-col {
+  order: 0;
+  text-align: center;
+}
+
+.columns-product > div > .columns-product-img-col img {
+  display: block;
+  width: 100%;
+  max-width: 312px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.columns-product h1 {
+  font-size: 43px;
+  font-weight: 500;
+  font-family: var(--heading-font-family);
+  line-height: 43px;
+  text-transform: uppercase;
+  color: var(--text-color);
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
+.columns-product h3 {
+  font-size: 25px;
+  font-weight: 500;
+  font-family: var(--heading-font-family);
+  line-height: 25px;
+  color: var(--text-color);
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.columns-product p {
+  font-size: var(--body-font-size-m);
+  font-family: var(--body-font-family);
+  line-height: 1.7;
+  color: var(--text-color);
+}
+
+.columns-product a:any-link {
+  color: var(--text-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.columns-product p.button-wrapper {
+  margin: 16px 0;
+}
+
+/* Style BUY NOW link as button (EDS may or may not auto-decorate) */
+.columns-product > div > div:not(.columns-product-img-col) > p:last-child a:any-link,
+.columns-product a.button:any-link {
+  display: inline-block;
+  background-color: rgb(95 119 155);
+  color: #fff;
+  padding: 6px 20px;
+  border: 1px solid var(--text-color);
+  border-radius: 3px;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.columns-product > div > div:not(.columns-product-img-col) > p:last-child a:hover,
+.columns-product a.button:hover {
+  background-color: var(--text-color);
+  color: #fff;
+}
+
+@media (width >= 900px) {
+  .columns-product > div {
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .columns-product > div > div {
+    order: unset;
+  }
+
+  .columns-product > div > .columns-product-img-col {
+    flex: 0 0 25%;
+    order: unset;
+  }
+
+  .columns-product > div > .columns-product-img-col img {
+    max-width: 100%;
+  }
+
+  .columns-product > div > div:not(.columns-product-img-col) {
+    flex: 1;
+  }
+}

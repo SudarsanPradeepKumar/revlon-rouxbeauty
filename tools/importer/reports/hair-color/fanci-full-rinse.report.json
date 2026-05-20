@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://rouxbeauty.com/hair-color/fanci-full-rinse/",
+  "path": "hair-color/fanci-full-rinse",
+  "timestamp": "2026-05-20T08:50:16.344Z",
+  "title": "Fanci-Full Rinse - RouxBeauty.com",
+  "template": "product-page",
+  "blocks": [
+    "columns-product",
+    "tabs-product"
+  ]
+}
